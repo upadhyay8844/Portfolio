@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="bhavya-designstyle-cartoon-m.png" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">Services</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>Hi, I'm <span>Bhavya Upadhyay</span></h1>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="IMG_20221216_160255-removebg-preview.jpg"/>
+          </div>
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p class="intro">
+              I holds the strong knowledge of HTML,CSS and JavaScript. I have a
+              keen interest in Programming, C programming, Data structures and
+              Algorithms. And also like to learn new things related to
+              technology which help in my career. My main focus area is
+              Artificial Intelligence and i can do it as well. Apart from these
+              my hobbies are reading books, Doing Competitive Coding and
+              Listening to new songs. Currently i'm interested in coding in
+              python.Also, I am a great web developer.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>Javascript</span></li>
+                <li><span>Python</span></li>
+                <li><span>Java</span></li>
+                <li><span>c/c++</span></li>
+                <li><span>O.S.</span></li>
+                <li><span>SQL</span></li>
+                <li><span>.Net</span></li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Trainee- Software Engineer at Nirvana Solutions</span>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2023</span><br />B-Tech in Computer Science &
+                  Engineering from GLA University, Mathura.
+                </li>
+                <li>
+                  <span>2016</span><br />Intermediate in Science Stream from
+                  Greenfields Public School, Delhi.
+                </li>
+                <li>
+                  <span>2018</span><br />High School from Greenfields Public
+                  School, Delhi.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------Contact----------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p>
+              <i class="fa fa-envelope" aria-hidden="true"></i
+              >bhavya.upadhyay@nirvanasolutions.com
+            </p>
+            <p><i class="fa fa-phone" aria-hidden="true"></i>+91 7859891661</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/bhavya.upadhyay.37/"
+                ><i class="fa fa-facebook-square" aria-hidden="true"></i>
+              </a>
+              <a href="https://twitter.com/UpadhyayBhavya"
+                ><i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="www.linkedin.com/in/bhavya-upadhyay-19449011b"
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+              ></a>
+            </div>
+            <a href="Bhavya Upadhyay (2).pdf" download class="btn btn2">Download Cv</a>
+          </div>
+          <div class="contct-right">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class ="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Bhavya Upadhyay</p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
